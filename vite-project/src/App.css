@@ -2,7 +2,7 @@
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
-  text-align: center;
+  /*text-align: center;*/
 }
 
 .logo {
@@ -62,7 +62,7 @@
 }
 .input-field {
   margin-bottom: 20px;
-  width: 20vw;
+  width: 15vw;
   border-radius: 5px;
   height: 25px;
 }
@@ -85,4 +85,16 @@
   /*transform: translateY(-50%); */
   width: 30px; 
   /*height: 25px;*/
+}
+
+.job-item {
+  border: 2px solid rgb(255, 255, 255);
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: rgb(59, 59, 59);
+  border-radius: 8px;
+  
+}
+ul {
+  list-style: none;
 }

@@ -1,6 +1,5 @@
  
-
-export default function Job(props) {
+ function Job(props) {
   return (
     <div>
       <p><span className="first-text">Company:</span> {props.company}</p>
