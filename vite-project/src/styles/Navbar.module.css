@@ -1,0 +1,15 @@
+.menu {
+    display: flex;
+    justify-content: flex-start;
+    background-color: rgb(201, 213, 133);
+}
+
+.itemtext {
+    color: rgb(92, 43, 226);
+    margin-right: 30px;
+}
+.list {
+    display: flex;
+    justify-content: flex-end;
+}
+
