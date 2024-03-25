@@ -1,7 +1,10 @@
 .menu {
     display: flex;
     justify-content: flex-start;
-    background-color: rgb(201, 213, 133);
+    width: 80%;
+    margin: 0 auto;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid brown;
 }
 
 .itemtext {
