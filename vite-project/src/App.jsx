@@ -1,5 +1,5 @@
 import './App.css'
-import React, { useState } from 'react';
+import React, { createContext, useState } from 'react';
 import Navbar from './components/Navbar';
 import { BrowserRouter, Routes, Route, Navigate, Outlet } from 'react-router-dom';
 import Homepage from './components/Homepage';
@@ -10,39 +10,30 @@ import Signin from './components/Singin';
 import { useContext } from 'react';
 import { AuthContext } from './AuthContext';
 import Joblist from "./components/Jobslist"
+import { useTheme } from './components/ThemeContext';
+
 
 
 function ProtectedRoute() {
-
   const authContext = useContext(AuthContext);
-
   const isAuthenticated = authContext && authContext.user !== null;
   console.log("isAuthenticated", isAuthenticated)
-
-  return isAuthenticated ? <Joblist /> : <Navigate to="/signin" replace />;
-
+  return isAuthenticated ? <Outlet /> : <Navigate to="/signin" replace />;
 }
 
 
 
 function App() {
-  
-
-
   const authContext = useContext(AuthContext);
-  console.log("authContext: ", authContext);
-
-
   const isAuthenticated = authContext && authContext.user !== null;
-  console.log("isAuthenticated", isAuthenticated)
-
+ 
+  const {isDark} = useTheme()
   
-
   return (
-<BrowserRouter>
-   
-    <Navbar/>
 
+<BrowserRouter>
+<div className={`app ${isDark ? "dark" : "light"}`}>
+    <Navbar/>
     <Routes>
     
         <Route path="/" element={<Homepage />} />
@@ -50,15 +41,14 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/signup" element={<Signup />}/>
         <Route path="/signin" element={<Signin />}/>
-      {/*<Route path="/joblist" element={<ProtectedRoute/>}>*/}
+      <Route path="/joblist" element={<ProtectedRoute/>}>
                  <Route path="/joblist" element={<Joblist/>}/>
-                 
-             
-   
-    </Routes>
-    
-           
+                 </Route>
+                          
+    </Routes>   
+    </div>
   </BrowserRouter>
+
   )
 }
 

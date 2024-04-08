@@ -25,6 +25,7 @@
 .input-div {
   display: flex;
   position: relative;
+justify-content: center;
 }
 .visually-hidden {
   position: absolute;
@@ -54,14 +55,19 @@
   background-color: rgb(197, 197, 197);
   border-radius: 8px;
   
+  width: 80%;
+  margin-inline: auto;
+}
+.description {
+  height: 150px;
+  overflow: hidden;
+ 
 }
 ul {
   list-style: none;
 }
 
-p {
-  text-align: center;
-}
+
 
 form {
   margin: 0 auto;
@@ -69,3 +75,50 @@ form {
   background-color: rgb(109, 80, 80);
   padding: 30px;
 }
+
+.more-info {
+color: orange;
+text-decoration: none;
+  margin-left: 10px;
+}
+
+
+/*---------------theme-----------------------*/
+.app.dark {
+  background-color: #222;
+  height: 100vh;
+  color: white;
+}
+.app.dark nav{
+  background-color: #222;
+}
+.job-container.dark {
+  background-color: #222;
+  height: auto;
+  color: rgb(255, 255, 255);
+}
+.job-item.dark {
+  background-color: rgb(34, 34, 44);
+}
+.app.light {
+  background-color: #ffffff;
+  height: 100vh;
+  color: #222;
+}
+.app.light nav {
+  background-color: #ffffff;
+}
+.input-field.dark {
+  background-color: #434343;
+}
+/*.logoimg.dark {
+  background-image: url("images/logoDark.png");
+}
+.logoimg.light {
+  background-image: url("images/logo.png");
+}
+.logoimg {
+  width: 200px;
+  height: 200px;
+  background-color: aquamarine;
+}*/

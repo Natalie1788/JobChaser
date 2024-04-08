@@ -1,7 +1,10 @@
+import { useTheme } from "./ThemeContext";
 
 
 
 function Contact() {
+  const {isDark} = useTheme()
+  
     return(
     <div>
       <h1>Our contacts</h1>

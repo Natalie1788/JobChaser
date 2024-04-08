@@ -1,7 +1,11 @@
 
 import SignUpForm from "./SignUpForm";
+import { useTheme } from "./ThemeContext";
+
 
 function Signup() {
+  const {isDark} = useTheme()
+  
     return(
     <div>
       <h1>Sign Up</h1>

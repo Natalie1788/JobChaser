@@ -1,7 +1,11 @@
 
+import { useTheme } from "./ThemeContext";
+
 
 
 function Homepage() {
+  const {isDark} = useTheme()
+  
     return(
     <div>
       <h1>Home Page</h1>

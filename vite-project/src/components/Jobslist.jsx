@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import useInput from './useInput';
 import search from "../images/search1.png"
+import { useTheme } from './ThemeContext';
 
 
 function JobList() {
@@ -8,6 +9,7 @@ function JobList() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const input = useInput();
+  const {isDark} = useTheme()
   
 const fetchData = useCallback(
   async () => {
@@ -37,9 +39,9 @@ useEffect(() => {
 
   
     return (
-      <>
+      <div className={`job-container ${isDark ? "dark" : "light"}`}>
       <div className="input-div">
-      <input className="input-field"
+      <input className={`input-field ${isDark ? "dark" : "light"}`}
         type="text" 
         placeholder="Search..." 
        {...input}
@@ -66,18 +68,21 @@ useEffect(() => {
               )
               
               .map((job, index) => (
-                <li key={index} className='job-item'>
+                <li key={index} className={`job-item ${isDark ? "dark" : "light"}`}>
                   <span><strong>Title:</strong> {job.headline}</span><br />
                   <span><strong>Company:</strong> {job.employer.name}</span><br />
-                  <span><strong>Description:</strong> {job.description.text}</span><br />
-                  <span><strong>Location:</strong> {job.workplace_address.municipality}</span><br />
+                  <div className='description'><strong>Description:</strong> {job.description.text}
+                  </div>
+                  <span>...</span>
+                  <a className='more-info' href={job.webpage_url}>more info</a>
+                  <p><strong>Location:</strong> {job.workplace_address.municipality}</p><br />
                 </li>
               ))}
             </ul>
             </>
           )}
         </div>
-        </>
+        </div>
       );
     }
 

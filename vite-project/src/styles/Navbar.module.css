@@ -4,7 +4,7 @@
     width: 80%;
     margin: 0 auto;
     background-color: rgb(255, 255, 255);
-    border: 1px solid brown;
+  
 }
 
 .itemtext {
@@ -15,4 +15,5 @@
     display: flex;
     justify-content: flex-end;
 }
+
 
