@@ -27,13 +27,13 @@ function Navbar() {
     <nav className={styles.menu}>
      <img src={isDark ? logoDark : logo} alt="logo" />
       <ul className={styles.list}>
-        <li><Link to="/"><span className={styles.itemtext}>Home</span></Link></li>
-        <li><Link to="/joblist"><span className={styles.itemtext}>Job</span></Link></li>
-        <li><Link to="/about"><span className={styles.itemtext}>About</span></Link></li>
-        <li><Link to="/contact"><span className={styles.itemtext}>Contact</span></Link></li>
-        <li><Link to="/signup"><span className={styles.itemtext}>SingUp</span></Link></li>
+        <li><Link to="/" style={{textDecoration:"none"}}><span className={styles.itemtext}>Home</span></Link></li>
+        <li><Link to="/joblist"  style={{textDecoration:"none"}}><span className={styles.itemtext}>Job</span></Link></li>
+        <li><Link to="/about"  style={{textDecoration:"none"}}><span className={styles.itemtext}>About</span></Link></li>
+        <li><Link to="/contact"  style={{textDecoration:"none"}}><span className={styles.itemtext}>Contact</span></Link></li>
+        <li><Link to="/signup"  style={{textDecoration:"none"}}><span className={styles.itemtext}>SingUp</span></Link></li>
         <li><button onClick={handleSignOut}>Sign Out</button></li>
-        <li><button onClick={toggleTheme}>Change theme</button></li>
+        <li><button style={{marginLeft: "20px"}} onClick={toggleTheme}>Dark/Light</button></li>
       </ul>
     </nav>
   );

@@ -38,7 +38,7 @@ function SignUpForm() {
     <form onSubmit={handleSubmit(formSubmit)}>
       <div>
         <label htmlFor="email">Email:</label>
-        <input
+        <input className="input-form"
           id="email"
           type="email"
           {...register("email", {
@@ -54,7 +54,7 @@ function SignUpForm() {
 
       <div>
         <label htmlFor="password">Password:</label>
-        <input
+        <input className="input-form"
           id="password"
           type="password"
           {...register("password", {
@@ -70,7 +70,7 @@ function SignUpForm() {
 
       <div>
         <label htmlFor="confirmPassword">Confirm Password:</label>
-        <input
+        <input className="input-form"
           id="confirmPassword"
           type="password"
           {...register("confirmPassword", {

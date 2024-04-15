@@ -23,9 +23,9 @@
   height: 25px;
 }
 .input-div {
-  display: flex;
+text-align: center;
   position: relative;
-justify-content: center;
+
 }
 .visually-hidden {
   position: absolute;
@@ -41,10 +41,11 @@ justify-content: center;
 }
 .search-image {
   position: absolute;
-  top: 4px; 
-  right: 10px; 
-  /*transform: translateY(-50%); */
-  width: 30px; 
+  /*top: 0; 
+  right: 0; */
+  transform: translateX(-100%); 
+  width: 35px; 
+  margin-top: 2px;
   /*height: 25px;*/
 }
 
@@ -72,14 +73,27 @@ ul {
 form {
   margin: 0 auto;
   width: 30%;
-  background-color: rgb(109, 80, 80);
+  background-color: rgb(34, 34, 44);
   padding: 30px;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 8px;
+}
+.input-form {
+  margin-left: 20px;
+  margin-bottom: 15px;
 }
 
 .more-info {
 color: orange;
 text-decoration: none;
   margin-left: 10px;
+ 
+}
+
+.categories {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
 
